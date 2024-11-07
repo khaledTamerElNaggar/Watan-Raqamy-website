@@ -9,102 +9,115 @@
     <title>Watan Raqami Registration</title>
 </head>
 <body>
- <div class="wrapper">
-    <nav class="nav">
-        <div class="nav-logo">
-            <img src="../imgs/watanlogo.png" alt="logo" class="nav-imgLogo">
-            <p>Watan Raqami</p>
-        </div>
-
-        <div class="nav-menu" id="navMenu">
-            <ul>
-                <li><a  href="../Index.html"><button class="nav-btn" id="loginBtn">Home</button></a></li>
-            </ul>
-        </div>
-
-        <div class="nav-menu-btn">
-            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
-        </div>
-    </nav>
-
-    <!----------------------------- Registration Form ----------------------------------->    
-    <div class="form-box">
-        <div class="register-container" id="register">
-            <div class="top">
-                <header> Join to us !</header>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <img src="images/IEEE.jpeg" alt="logo" class="nav-imgLogo2">
+                <img src="../imgs/watanlogo.png" alt="logo" class="nav-imgLogo">
+                <!-- <p>Watan Raqami</p> -->
             </div>
-            <div class="two-forms">
+
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="../Index.html"><button class="nav-btn" id="loginBtn">Home</button></a></li>
+                </ul>
+            </div>
+
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+
+        <!----------------------------- Registration Form ----------------------------------->
+        <div class="form-box">
+            <div class="register-container" id="register">
+                <div class="top">
+                    <header>Join to us!</header>
+                </div>
+                <div class="two-forms">
+                    <div class="input-box">
+                        <input type="text" id="firstName" class="input-field" placeholder="First Name" required>
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="lastName" class="input-field" placeholder="Last Name" required>
+                        <i class="bx bx-user"></i>
+                    </div>
+                </div>
                 <div class="input-box">
-                    <input type="text" id="firstName" class="input-field" placeholder="First Name" required>
-                    <i class="bx bx-user"></i>
+                    <input type="email" id="email" class="input-field" placeholder="Email" required>
+                    <i class="bx bx-envelope"></i>
                 </div>
                 <div class="input-box">
-                    <input type="text" id="lastName" class="input-field" placeholder="Last Name" required>
-                    <i class="bx bx-user"></i>
+                    <input type="text" id="jobTitle" class="input-field" placeholder="Job Title" required>
+                    <i class="bx bx-briefcase"></i>
                 </div>
-            </div>
-            <div class="input-box">
-                <input type="email" id="email" class="input-field" placeholder="Email" required>
-                <i class="bx bx-envelope"></i>
-            </div>
-            <div class="input-box">
-                <input type="text" id="jobTitle" class="input-field" placeholder="Job Title" required>
-                <i class="bx bx-briefcase"></i>
-            </div>
-            <div class="input-box">
-                <input type="submit" class="submit" value="Register" onclick="registerUser()">
-            </div>
-            <div class="two-col">
-                <div class="one">
-                    <input type="checkbox" id="register-check">
-                    <label for="register-check"> Remember Me</label>
+                <div class="input-box">
+                    <input type="text" id="phoneNumber" class="input-field" placeholder="Phone Number" required>
+                    <i class="bx bx-phone"></i>
                 </div>
-                <div class="two">
-                    <label><a href="#">Terms & conditions</a></label>
+                <div class="social-forms">
+                    <div class="input-box">
+                        <input type="url" id="facebook" class="input-field" placeholder="Facebook URL(optinal)">
+                        <i class="bx bxl-facebook"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="url" id="linkedin" class="input-field" placeholder="LinkedIn URL(optinal)">
+                        <i class="bx bxl-linkedin"></i>
+                    </div>
                 </div>
+                <div class="input-box">
+                    <input type="submit" class="submit" value="Register" onclick="registerUser()">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check"> Remember Me</label>
+                    </div>
+                    <div class="two">
+                        <label><a href="#">Terms & Conditions</a></label>
+                    </div>
+                </div>
+                <div id="registrationMessage" class="message"></div>
             </div>
-            <div id="registrationMessage" class="message"></div>
         </div>
     </div>
-</div>   
 
-<script>
-    function myMenuFunction() {
-        var navMenu = document.getElementById("navMenu");
-        if (navMenu.className === "nav-menu") {
-            navMenu.className += " responsive";
-        } else {
-            navMenu.className = "nav-menu";
+    <script>
+        function myMenuFunction() {
+            var navMenu = document.getElementById("navMenu");
+            if (navMenu.className === "nav-menu") {
+                navMenu.className += " responsive";
+            } else {
+                navMenu.className = "nav-menu";
+            }
         }
-    }
-</script>
 
-<script>
-    function registerUser() {
-        // Get the input values
-        var firstName = document.getElementById('firstName').value;
-        var lastName = document.getElementById('lastName').value;
-        var email = document.getElementById('email').value;
-        var jobTitle = document.getElementById('jobTitle').value;
+        function registerUser() {
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var email = document.getElementById('email').value;
+            var jobTitle = document.getElementById('jobTitle').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
 
-        // Check if all fields are filled
-        if (firstName && lastName && email && jobTitle) {
-            // Display the registration message
-            var messageDiv = document.getElementById('registrationMessage');
-            messageDiv.innerHTML = `<p>Thanks for your registration, ${firstName}!</p>`;
-            messageDiv.style.color = 'white';
-            messageDiv.style.fontSize = '20px';
-            messageDiv.style.textAlign = 'center';
-            messageDiv.style.paddingTop = '20px';
+            if (firstName && lastName && email && jobTitle && phoneNumber ) {
+                var messageDiv = document.getElementById('registrationMessage');
+                messageDiv.innerHTML = `<p>Thanks for your registration, ${firstName}!</p>`;
+                messageDiv.style.color = 'white';
+                messageDiv.style.fontSize = '20px';
+                messageDiv.style.textAlign = 'center';
+                messageDiv.style.paddingTop = '20px';
 
-            // Clear the input fields
-            document.getElementById('firstName').value = '';
-            document.getElementById('lastName').value = '';
-            document.getElementById('email').value = '';
-            document.getElementById('jobTitle').value = '';
+                document.getElementById('firstName').value = '';
+                document.getElementById('lastName').value = '';
+                document.getElementById('email').value = '';
+                document.getElementById('jobTitle').value = '';
+                document.getElementById('phoneNumber').value = '';
+                document.getElementById('facebook').value = '';
+                document.getElementById('linkedin').value = '';
+            }
         }
-    }
-</script>
+    </script>
 
 </body>
 </html>
