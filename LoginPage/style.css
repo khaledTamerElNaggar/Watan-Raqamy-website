@@ -251,6 +251,11 @@ body {
         height: 40px;
         margin-top: 20px;
     }
+    .nav-imgLogo2 {
+        width: 40px;
+        height: 25px;
+        margin-top: 27px;
+    }
     .nav-logo p {
         font-size: 20px;
     }
