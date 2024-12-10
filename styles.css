@@ -88,6 +88,7 @@ body {
 }
 
 /* Hero Section */
+/* General Hero Section Styles */
 .hero {
     height: calc(100vh - 60px); /* Adjust height to account for navbar */
     display: flex;
@@ -95,16 +96,19 @@ body {
     justify-content: center;
     text-align: center;
     color: white;
+    padding: 20px; /* Add padding for smaller screens */
+    background: url('background-image.jpg') no-repeat center center / cover; 
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 1); /* Add shadow effect */
+    margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Add shadow effect */
 }
@@ -112,107 +116,158 @@ body {
 .btn-primary {
     background-color: #007bff;
     border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
 }
 
 .btn-primary:hover {
     background-color: #0056b3;
 }
 
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* Stack elements vertically */
+        height: auto; /* Allow height to adjust naturally */
+        padding: 30px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .btn-primary {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}
+
+/* end Hero Section */
 
 /* columes3 */
+/* General Row Styling */
+/* General Styling */
 .row {
     display: flex;
     justify-content: center;
+    margin: 20px 0;
+}
+
+.custom-card {
+    margin: 35px;
+    flex: 1 1 30%; 
+    max-width: 10%;
+    text-align: center;
+}
+
+.partners-card {
     margin-top: 30px;
-    margin-bottom: 30px;
-}
-.custom-card{
-    margin-left: 40px;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background: white;
 }
 
-.card-body {
-    padding: 15px;
+.partners-card-body {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 40px;
-    max-height: 100px;
-}
-.card-body3{
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 40px;
-    max-height: 300px;
+    align-items: center;
 }
 
-.card-title {
+.partners-card-title {
     font-size: 1.2rem;
     margin-bottom: 10px;
     font-weight: bold;
-    text-align: center;
-}
-.card-title4{
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    font-weight: bold;
-    margin-left: 320px;
 }
 
 .logo {
-    max-height: 45px; 
-    max-width: 40px;   
+    max-width: 60px;
+    max-height: 60px;
+    margin-top: 10px;
+}
+
+.partners-card-text {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* Strategic Partners Styling */
+.strategic-partners .partners-card {
+    width: 60%; 
+    margin: 0 auto;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
     margin-top: 20px;
 }
 
-.card-1-title,
-.card-2-title {
-    margin-top: -30px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.logo-partner {
+    max-width: 100px;
+    max-height: 80px;
 }
 
-.card-title .me-2 {
-    margin-left: -10px;
+/* Responsive Design */
+@media (max-width: 992px) {
+    .custom-card {
+        flex: 1 1 45%; /* Two cards per row on medium screens */
+        max-width: 45%;
+    }
+
+    .strategic-partners .partners-card {
+        width: 80%; /* Increase width for medium screens */
+    }
 }
 
-.Partners-logos{
-    display: flex;
-    justify-content: center; 
-    margin-left: 150px;
-    margin-top: 20px;
+@media (max-width: 768px) {
+    .custom-card {
+        flex: 1 1 100%; /* Stack cards on small screens */
+        max-width: 100%;
+    }
+
+    .strategic-partners .partners-card {
+        width: 90%; /* Increase width for small screens */
+    }
+
+    .partners-logos {
+        gap: 10px; /* Reduce gap between logos on small screens */
+    }
 }
-.Partners-logos .logo-eg {
-    width: 120px;
-    height: 70px;
-}
-.Partners-logos .logo-ntra {
-    margin-left: 20px;
-    width: 120px;
-    height: 70px;
-}
-.Partners-logos .logo-edu{
-    width: 120px;
-    height: 70px;
-    margin-left: 30px;
-}
-.Partners-logos .logo-egy{
-    width: 120px;
-    height: 70px;
-    margin-left: 50px;
-}
-.Partners-logos .logo-etsilat{
-    width: 120px;
-    height: 80px;
-    margin-left: 70px;
-}
-.Partners-logos .logo-yang{
-    width: 120px;
-    height: 80px;
-    margin-left: 50px;
-}
+/* end partenrs */
 
 
 
@@ -226,15 +281,68 @@ body {
 
 /* end about */
 
+/* slider */
+/* General Styling */
+#aboutCarouselSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#aboutCarousel {
+    width: 70%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.carousel-inner img {
+    border-radius: 10px; 
+    object-fit: cover; 
+}
+
+/* Carousel Controls Styling */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    #aboutCarousel {
+        width: 90%; 
+    }
+}
+
+@media (max-width: 768px) {
+    #aboutCarousel {
+        width: 100%; 
+    }
+}
+
+/* end slider */
+
 
 /* speakers */
 .card{
     margin-top: 2rem;
     transition: all 0.5s;
     overflow: hidden;
-    /* height: auto; */
-    max-height: 460px;
+    max-height: 540px;
+    min-height: 540px;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    background: white;
     
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .card img{
     height: 300px;
