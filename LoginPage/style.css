@@ -266,16 +266,16 @@ column {
         font-size: 20px;
     }
     .top {
-        display: none;
+        display:none;
     }
     .form-box {
-        width: 60%;
         height: 700px; 
         margin-top: 10px;
     }
     .register-container {
-        width: 100%;
+        width: 70%;
         padding: 0 20px;
+        margin-top: 40px;
     }
     .register-container .two-forms {
         flex-direction: column;
