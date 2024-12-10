@@ -144,7 +144,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 40px;
-    max-height: 190px;
+    max-height: 300px;
 }
 
 .card-title {
@@ -181,36 +181,37 @@ body {
 .Partners-logos{
     display: flex;
     justify-content: center; 
-    margin-left: 220px;
+    margin-left: 150px;
+    margin-top: 20px;
 }
 .Partners-logos .logo-eg {
-    width: 60px;
-    height: 80px;
+    width: 120px;
+    height: 70px;
 }
 .Partners-logos .logo-ntra {
     margin-left: 20px;
-    width: 40px;
-    height: 50px;
+    width: 120px;
+    height: 70px;
 }
 .Partners-logos .logo-edu{
-    width: 90px;
-    height: 60px;
-    margin-left: 20px;
+    width: 120px;
+    height: 70px;
+    margin-left: 30px;
 }
 .Partners-logos .logo-egy{
-    width: 90px;
-    height: 60px;
-    margin-left: 20px;
+    width: 120px;
+    height: 70px;
+    margin-left: 50px;
 }
 .Partners-logos .logo-etsilat{
-    width: 90px;
-    height: 60px;
+    width: 120px;
+    height: 80px;
     margin-left: 70px;
 }
 .Partners-logos .logo-yang{
-    width: 90px;
-    height: 60px;
-    margin-left: 20px;
+    width: 120px;
+    height: 80px;
+    margin-left: 50px;
 }
 
 
