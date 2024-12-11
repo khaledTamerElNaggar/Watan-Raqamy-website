@@ -32,7 +32,7 @@ function registerUser() {
   }
 }
 
-const scriptURL = 'https://script.google.com/macros/s/AKfycbzPPnO7cFtKNilFQhlKDDDPoXP11SE5FHHYB_CFWkjmWDxvJUfHl8PkCNUoTdiUloCMKQ/exec'
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxDSaMnag6pKYHCf8CIY6hIRMltmP8iuB0_0xwopn--wukwe_Z08IXqiP-y2PcCecJMpQ/exec'
 
 const form = document.forms['contact-form']
 
