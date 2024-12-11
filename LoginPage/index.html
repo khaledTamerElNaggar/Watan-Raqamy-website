@@ -1,86 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<html>
+  <head>
+    <title>ECC-AI 2024 - Registration</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="style.css">
-    <title>Watan Raqami Registration</title>
-</head>
-<body>
-    <div class="wrapper">
-        <nav class="nav">
-            <div class="nav-logo">
-                <span class="navbar-title">ECC-AI 2024</span>
-            </div>
-
-            <div class="nav-menu" id="navMenu">
-                <ul>
-                    <li><a href="../Index.html"><button class="nav-btn" id="loginBtn">Home</button></a></li>
-                </ul>
-            </div>
-
-            <div class="nav-menu-btn">
-                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
-            </div>
-        </nav>
-
-        <!----------------------------- Registration Form ----------------------------------->
-        <div class="form-box">
-            <div class="register-container" id="register">
-                <div class="top">
-                    <header>Join to us!</header>
-                </div>
-                <div class="two-forms">
-                    <div class="input-box">
-                        <input type="text" id="firstName" class="input-field" placeholder="First Name" required>
-                        <i class="bx bx-user"></i>
-                    </div>
-                    <div class="input-box">
-                        <input type="text" id="lastName" class="input-field" placeholder="Last Name" required>
-                        <i class="bx bx-user"></i>
-                    </div>
-                </div>
-                <div class="input-box">
-                    <input type="email" id="email" class="input-field" placeholder="Email" required>
-                    <i class="bx bx-envelope"></i>
-                </div>
-                <div class="input-box">
-                    <input type="text" id="jobTitle" class="input-field" placeholder="Job Title" required>
-                    <i class="bx bx-briefcase"></i>
-                </div>
-                <div class="input-box">
-                    <input type="text" id="phoneNumber" class="input-field" placeholder="Phone Number" required>
-                    <i class="bx bx-phone"></i>
-                </div>
-                <div class="social-forms">
-                    <div class="input-box">
-                        <input type="url" id="facebook" class="input-field" placeholder="Facebook URL(optinal)">
-                        <i class="bx bxl-facebook"></i>
-                    </div>
-                    <div class="input-box">
-                        <input type="url" id="linkedin" class="input-field" placeholder="LinkedIn URL(optinal)">
-                        <i class="bx bxl-linkedin"></i>
-                    </div>
-                </div>
-                <div class="input-box">
-                    <input type="submit" class="submit" value="Register" onclick="registerUser()">
-                </div>
-                <div class="two-col">
-                    <div class="one">
-                        <input type="checkbox" id="register-check">
-                        <label for="register-check"> Remember Me</label>
-                    </div>
-                    <div class="two">
-                        <label><a href="#">Terms & Conditions</a></label>
-                    </div>
-                </div>
-                <div id="registrationMessage" class="message"></div>
-            </div>
+  </head>
+  <body>
+    <section class="hero is-primary is-bold">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">Registration</h1>
         </div>
-    </div>
+      </div>
+    </section>
 
-   <script src="script.js"></script>
-</body>
+    <form id="form" class="container m-4 pl-4" method="POST">
+      <div class="field">
+        <label class="label">First Name</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your First Name"
+            name="First Name"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Last Name</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Last Name"
+            name="Last Name"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input
+            class="input"
+            type="email"
+            placeholder="Your Email"
+            name="Email"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Job Title</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Job Title"
+            name="Job Title"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Phone Number</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Phone Number"
+            name="Phone Number"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Facebook URL (optional)</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your Facebook URL"
+            name="Facebook URL (optional)"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">LinkedIn URL (optional)</label>
+        <div class="control">
+          <input
+            class="input"
+            type="text"
+            placeholder="Your LinkedIn URL"
+            name="LinkedIn URL (optional)"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Agree to Terms</label>
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox" name="Agree To Terms" value="yes" /> I agree
+            to the terms and conditions
+          </label>
+        </div>
+      </div>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-primary" type="submit" id="submit-button">
+            Register
+          </button>
+        </div>
+        <div class="control">
+          <a href="../Index.html" class="button is-link">Home Page</a>
+        </div>
+      </div>
+    </form>
+
+    <div
+      id="message"
+      style="display: none; margin: 20px; font-weight: bold; color: rgb(0, 0, 0); padding: 8px; background-color: rgb(59, 59, 59); border-radius: 4px; border-color: rgb(255, 195, 127);"
+    ></div>
+
+    <script>
+      document.getElementById("form").addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent the default form submission
+        document.getElementById("message").textContent = "Submitting..";
+        document.getElementById("message").style.display = "block";
+        document.getElementById("submit-button").disabled = true;
+
+        // Collect the form data
+        var formData = new FormData(this);
+        var keyValuePairs = [];
+        var firstName = "";
+        var lastName = "";
+        for (var pair of formData.entries()) {
+          keyValuePairs.push(pair[0] + "=" + pair[1]);
+          if (pair[0] === "First Name") firstName = pair[1];
+          if (pair[0] === "Last Name") lastName = pair[1];
+        }
+
+        var formDataString = keyValuePairs.join("&");
+
+        // Send a POST request to your Google Apps Script
+        fetch(
+          "https://script.google.com/macros/s/AKfycbz_js1q70SXRzWovlqwFQ14GIwYJwURrSepeJZdMivP1ECRDg7QnwaZ_MgDEPZgbSmI/exec",
+          {
+            redirect: "follow",
+            method: "POST",
+            body: formDataString,
+            headers: {
+              "Content-Type": "text/plain;charset=utf-8",
+            },
+          }
+        )
+          .then(function (response) {
+            // Check if the request was successful
+            if (response) {
+              return response; // Assuming your script returns JSON response
+            } else {
+              throw new Error("Failed to submit the form.");
+            }
+          })
+          .then(function (data) {
+            // Display a success message with user's name
+            document.getElementById("message").textContent = `Thanks for registration, ${firstName} ${lastName}!`;
+            document.getElementById("message").style.display = "block";
+            document.getElementById("message").style.backgroundColor = "green";
+            document.getElementById("message").style.color = "beige";
+            document.getElementById("submit-button").disabled = false;
+            document.getElementById("form").reset();
+
+            setTimeout(function () {
+              document.getElementById("message").textContent = "";
+              document.getElementById("message").style.display = "none";
+            }, 2600);
+          })
+          .catch(function (error) {
+            // Handle errors, you can display an error message here
+            console.error(error);
+            document.getElementById("message").textContent =
+              "An error occurred while submitting the form.";
+            document.getElementById("message").style.display = "block";
+          });
+      });
+    </script>
+  </body>
 </html>
