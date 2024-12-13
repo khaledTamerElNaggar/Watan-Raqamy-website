@@ -182,14 +182,14 @@ body {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+    flex-wrap: wrap; /* Ensure wrapping for all screen sizes */
 }
 
 .custom-card {
-    margin: 35px;
-    flex: 1 1 30%; 
-    max-width: 10%;
+    margin: 15px;
+    flex: 1 1 calc(25% - 30px); /* 4 cards per row with gap */
+    max-width: calc(25% - 30px);
     text-align: center;
-    
 }
 
 .partners-card {
@@ -199,7 +199,6 @@ body {
     padding: 15px;
     background: white;
     min-height: 250px;
-    max-height: 150px;
 }
 
 .partners-card-body {
@@ -216,7 +215,7 @@ body {
 
 .logo {
     max-width: 60px;
-    max-height: 60px;
+    height: auto; /* Maintain aspect ratio */
     margin-top: 10px;
 }
 
@@ -241,36 +240,55 @@ body {
 
 .logo-partner {
     max-width: 100px;
-    max-height: 80px;
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Responsive Design */
 @media (max-width: 992px) {
     .custom-card {
-        flex: 1 1 45%; /* Two cards per row on medium screens */
-        max-width: 45%;
+        flex: 1 1 calc(33.33% - 30px); /* 3 cards per row */
+        max-width: calc(33.33% - 30px);
     }
 
     .strategic-partners .partners-card {
-        width: 80%; /* Increase width for medium screens */
+        width: 80%;
     }
 }
 
 @media (max-width: 768px) {
     .custom-card {
-        flex: 1 1 100%; /* Stack cards on small screens */
-        max-width: 100%;
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+        max-width: calc(50% - 20px);
     }
 
     .strategic-partners .partners-card {
-        width: 90%; /* Increase width for small screens */
+        width: 90%;
     }
 
     .partners-logos {
-        gap: 10px; /* Reduce gap between logos on small screens */
+        gap: 10px; /* Reduce gap for smaller screens */
     }
 }
-/* end partenrs */
+
+@media (max-width: 576px) {
+    .custom-card {
+        flex: 1 1 100%; /* Stack all cards */
+        max-width: 100%;
+    }
+
+    .partners-card {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .partners-logos {
+        gap: 5px;
+    }
+
+    .logo-partner {
+        max-width: 80px;
+    }
+}
+
 
 
 
