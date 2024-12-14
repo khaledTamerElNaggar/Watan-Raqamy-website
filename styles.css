@@ -108,7 +108,7 @@ body {
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 1); /* Add shadow effect */
 }
@@ -133,7 +133,7 @@ body {
     }
 
     .hero p {
-        font-size: 1.125rem;
+        font-size: 1rem;
     }
 }
 
@@ -377,7 +377,7 @@ body {
 .timers .sessions{
     margin-top: 50px;
     margin-bottom: -10px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
 }
 
